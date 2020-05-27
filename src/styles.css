@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Anonymous Pro", monospace;
+  /* outline: 1px solid red; */
+}
+
+.page {
+  display: flex;
+  /* flex: 1; */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 50px 0 0 50px; */
+  height: 100vh;
+  background: black;
+  color: white;
+}
+
+.main_typer {
+  padding-right: 0;
+  padding-bottom: 20px;
+}
+.main_typer h1,
+attributes_typer #attribute {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.animation {
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.attributes_typer #attribute {
+  border-right: 0px;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
