@@ -7,8 +7,6 @@ function loadTyper() {
   const attributes = JSON.parse(attributesEle.getAttribute("data-elements"));
   const delay = parseInt(attributesEle.getAttribute("data-delay"), 10) ?? 1000;
 
-  // console.log(attributes, attributes.length, delay, attributes.length * delay);
-
   const runner = index => {
     attributeSpanEle.style.width = "0";
     const currentText = attributes[index];
@@ -31,11 +29,6 @@ function loadTyper() {
         count++;
       }
     }, charDelay);
-    // currentCharacters.forEach(char => {
-    //   displayText += char;
-    //   attributeSpanEle.innerHTML = displayText;
-    // });
-    // console.log("in runner", attributes[count]);
     setTimeout(() => {
       index++;
       if (index < attributes.length) {
@@ -50,10 +43,8 @@ function loadTyper() {
     mainTyperEle.style.borderRight = "0";
     attributeSpanEle.style.borderRight = "0.15em solid orange";
     attributeSpanEle.classList.add("animation");
-    // console.log(attributeSpanEle.getAnimations(), mainTyperEle.getAnimations());
     runner(0);
   }, 3000);
-  // setInterval(() => runner(0), attributes.length * delay);
 }
 
 loadTyper();
