@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Typer - Radnerus</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="src/index.js"></script>
+    <script>
+      function test() {
+        console.log('hey');
+      }
+    </script>
   </head>
 
-  <body onload="loadTyper()">
+  <body onload="!!loadTyper ? loadTyper() : test()">
     <div class="page">
       <span class="main_typer"><h1>Surendar Vinayagamoorthy</h1></span>
       <div
